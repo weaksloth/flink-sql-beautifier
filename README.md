@@ -2,6 +2,19 @@
 
 基于Calcite实现Flink SQL的格式化(美化)输出，能够将SQL语句去除多余的空行、自动换行等等，同时提供SQL校验的功能。
 
+```sql
+-- 格式化前：
+create table t1 (id string,name string) with('connector'='print')
+
+-- 格式化后
+CREATE TABLE t1 (
+  id STRING,
+  name STRING
+) WITH (
+  'connector' = 'print'
+);
+```
+
 
 
 # 2 应用场景
